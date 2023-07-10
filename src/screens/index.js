@@ -1,6 +1,4 @@
 import React from 'react';
-// import {Platform} from 'react-native';
-// import {useSelector, shallowEqual} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 
 // Screen

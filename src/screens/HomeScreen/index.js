@@ -21,7 +21,7 @@ function HomeScreen(props) {
     data,
     getEmployeeError,
     getEmployeeLoading,
-    // getEmployeeSuccess,
+    getEmployeeSuccess,
     deleteEmployeeSuccess,
     deleteEmployeeError,
     deleteEmployee,
@@ -100,17 +100,19 @@ function HomeScreen(props) {
           </Text>
         )}
 
-        <ItemList
-          data={data}
-          refreshing={getEmployeeLoading}
-          onRefresh={() => getEmployeeData()}
-          handleDelete={e => handleDeleteEmployee(e)}
-          editItem={e =>
-            props.navigation.navigate('UpdateItem', {
-              id: e,
-            })
-          }
-        />
+        {getEmployeeSuccess && (
+          <ItemList
+            data={data}
+            refreshing={getEmployeeLoading}
+            onRefresh={() => getEmployeeData()}
+            handleDelete={e => handleDeleteEmployee(e)}
+            editItem={e =>
+              props.navigation.navigate('UpdateItem', {
+                id: e,
+              })
+            }
+          />
+        )}
 
         <TouchableOpacity
           style={styles.addButton}

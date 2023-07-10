@@ -4,9 +4,10 @@
  *
  * @format
  */
+import 'react-native-gesture-handler';
 
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import {StatusBar, View, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
